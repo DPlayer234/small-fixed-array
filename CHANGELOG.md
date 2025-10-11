@@ -1,4 +1,13 @@
-# 0.4.9
+# 0.4.10
+
+- **Fixes `FixedString<u32>::from_static_trunc` iterating down from u32::MAX.**
+- Improves the `Debug` implementation for `FixedString`.
+- Implements `From<FixedString>` for `Box<str>`.
+- Improves the `From<Cow<'_, str>>` for `FixedString` implementation to always borrow static `FixedString`s.
+
+Thanks to `Joshix-1` and `DPlayer234` on GitHub for these improvements.
+
+# 0.4.9 (yanked)
 
 - Implements `TryFrom<Vec<T>>` for `FixedArray<T>`, and `TryFrom<String>` for `FixedString`.
 - Fixes `FixedString::from_static_trunc` panicking on char boundaries when truncating.
